@@ -6,11 +6,11 @@ const { describe, it, beforeEach, afterEach } = require('mocha');
 const { expect } = require('chai');
 const sinon = require('sinon');
 const mongoose = require('mongoose');
-const User = require('../database/models/User');
-const Event = require('../database/models/Event');
-const Registration = require('../database/models/Registration');
-const waitlistManager = require('../utils/waitlistManager');
-const registerCommand = require('../commands/user/register');
+const User = require('./src/database/models/User');
+const Event = require('./src/database/models/Event');
+const Registration = require('./src/database/models/Registration');
+const waitlistManager = require('./src/utils/waitlistManager');
+const registerCommand = require('./src/commands/user/register');
 
 describe('Модуль регистрации на мероприятия', () => {
     let sandbox;
