@@ -6,7 +6,7 @@ const { describe, it, beforeEach, afterEach } = require('mocha');
 const { expect } = require('chai');
 const sinon = require('sinon');
 const mongoose = require('mongoose');
-const User = require('../database/models/User');
+const User = require('./src/database/models/User');
 
 // Мокаем discord.js классы
 const mockDiscordClasses = {
@@ -34,7 +34,7 @@ const mockDiscordClasses = {
 };
 
 // Импортируем profileCommand
-const profileCommand = require('../commands/user/profile');
+const profileCommand = require('./src/commands/user/profile');
 
 describe('Модуль профиля пользователя', () => {
     let sandbox;

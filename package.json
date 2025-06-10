@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "deploy": "node deploy-commands.js",
+    "deploy": "node src/deploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
