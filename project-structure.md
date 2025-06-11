@@ -107,7 +107,7 @@ CLIENT_ID=your_client_id_here
 GUILD_ID=your_guild_id_here
 
 # URI подключения к MongoDB
-MONGODB_URI=mongodb://localhost:27017/synergy_bot
+DATABASE_URI=mongodb://localhost:27017/synergy_bot
 
 # ID канала для логов
 LOG_CHANNEL_ID=your_log_channel_id_here
