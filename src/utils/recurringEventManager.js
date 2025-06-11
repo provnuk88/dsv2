@@ -77,14 +77,14 @@ class RecurringEventManager {
      * @returns {Object|null} Даты следующего мероприятия или null, если больше нет повторений
      */
     static calculateNextEventDates(lastStartDate, lastEndDate, recurringSettings) {
-        const { frequency, interval, endAfterOccurrences, endDate } = recurringSettings;
+        const { frequency, interval, endAfterOccurrences, endDate: recurringEndDate } = recurringSettings;
         
         // Преобразуем строковые даты в объекты Date, если необходимо
         const startDate = new Date(lastStartDate);
-        const endDate = new Date(lastEndDate);
+        const lastEndDateObj = new Date(lastEndDate);
         
         // Вычисляем продолжительность мероприятия в миллисекундах
-        const duration = endDate.getTime() - startDate.getTime();
+        const duration = lastEndDateObj.getTime() - startDate.getTime();
         
         // Вычисляем дату начала следующего мероприятия
         let nextStartDate = new Date(startDate);
@@ -113,7 +113,7 @@ class RecurringEventManager {
         }
         
         // Проверяем, не превышена ли конечная дата повторений
-        if (recurringSettings.endDate && nextStartDate > new Date(recurringSettings.endDate)) {
+        if (recurringEndDate && nextStartDate > new Date(recurringEndDate)) {
             return null;
         }
         
