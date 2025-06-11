@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "deploy": "node src/deploy.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r dotenv/config \"**/*.test.js\""
   },
   "keywords": [
     "discord",
@@ -21,7 +21,6 @@
     "axios": "^1.6.2",
     "csv-writer": "^1.6.0",
     "discord.js": "^14.19.3",
-    "dotenv": "^16.5.0",
     "fs-extra": "^11.3.0",
     "json2csv": "^6.0.0-alpha.2",
     "mongoose": "^8.0.3",
@@ -29,5 +28,13 @@
     "node-cron": "^3.0.3",
     "winston": "^3.11.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@sinonjs/referee-sinon": "^12.0.0",
+    "chai": "^5.2.0",
+    "dotenv": "^16.5.0",
+    "jsverify": "^0.8.4",
+    "mocha": "^11.6.0",
+    "sinon": "^17.0.1"
   }
 }
