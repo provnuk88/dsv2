@@ -37,11 +37,17 @@
 4. Создайте файл `.env` в корневой папке проекта со следующим содержимым:
    ```
    BOT_TOKEN=ваш_токен_бота
-   MONGODB_URI=ваша_строка_подключения_к_mongodb
+   DATABASE_URI=ваша_строка_подключения_к_mongodb
    CLIENT_ID=id_вашего_приложения_discord
    GUILD_ID=id_вашего_сервера_discord
    ADMIN_ROLE_ID=id_роли_администратора
    LOG_CHANNEL_ID=id_канала_для_логов
+   LOG_WEBHOOK_URL=url_вебхука_для_логов
+   ANNOUNCEMENT_CHANNEL_ID=id_канала_объявлений
+   NOTIFICATION_CHANNEL_ID=id_канала_уведомлений
+   WEBHOOK_URL=url_вебхука_для_экспорта
+   CACHE_TTL=300
+   CACHE_CHECK_PERIOD=60
    ```
    Замените значения на ваши собственные.
 

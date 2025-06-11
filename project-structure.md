@@ -107,10 +107,16 @@ CLIENT_ID=your_client_id_here
 GUILD_ID=your_guild_id_here
 
 # URI подключения к MongoDB
-MONGODB_URI=mongodb://localhost:27017/synergy_bot
+DATABASE_URI=mongodb://localhost:27017/synergy_bot
 
 # ID канала для логов
 LOG_CHANNEL_ID=your_log_channel_id_here
+LOG_WEBHOOK_URL=your_log_webhook_url_here
+ANNOUNCEMENT_CHANNEL_ID=your_announcement_channel_id_here
+NOTIFICATION_CHANNEL_ID=your_notification_channel_id_here
+WEBHOOK_URL=your_export_webhook_url_here
+CACHE_TTL=300
+CACHE_CHECK_PERIOD=60
 
 # ID ролей
 ADMIN_ROLE_ID=your_admin_role_id_here
