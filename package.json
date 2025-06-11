@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "deploy": "node src/deploy.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ./setup.js \"*.test.js\""
   },
   "keywords": [
     "discord",
@@ -29,5 +29,10 @@
     "node-cron": "^3.0.3",
     "winston": "^3.11.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "sinon": "^17.0.1"
   }
 }
