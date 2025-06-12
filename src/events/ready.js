@@ -1,10 +1,11 @@
 const { Events, ActivityType } = require('discord.js');
 const logger = require('../utils/logger');
+const announcementScheduler = require('../utils/announcementScheduler');
 
 module.exports = {
     name: Events.ClientReady,
     once: true,
-    execute(client) {
+    async execute(client) {
         logger.info(`Бот ${client.user.tag} успешно подключен к Discord!`);
         
         // Устанавливаем статус и активность бота
@@ -16,6 +17,7 @@ module.exports = {
             }]
         });
         
+        await announcementScheduler.initialize();
         logger.info('Бот готов к работе!');
     },
 };
