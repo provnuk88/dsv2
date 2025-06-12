@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "deploy": "node src/deploy.js",
+    "deploy": "node src/deploy-commands.js",
     "test": "mocha -r dotenv/config \"**/*.test.js\""
   },
   "keywords": [
