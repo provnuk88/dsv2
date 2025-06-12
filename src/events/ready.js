@@ -1,5 +1,6 @@
 const { Events, ActivityType } = require('discord.js');
 const logger = require('../utils/logger');
+const eventScheduler = require('../utils/eventScheduler');
 
 module.exports = {
     name: Events.ClientReady,
@@ -15,7 +16,10 @@ module.exports = {
                 type: ActivityType.Playing
             }]
         });
-        
+
+        // Инициализируем планировщик мероприятий
+        eventScheduler.initialize();
+
         logger.info('Бот готов к работе!');
     },
 };
