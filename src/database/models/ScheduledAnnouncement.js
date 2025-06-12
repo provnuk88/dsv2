@@ -6,25 +6,33 @@
 const { Schema, model } = require('mongoose');
 
 const ScheduledAnnouncementSchema = new Schema({
-  title: { 
-    type: String, 
-    required: true 
+  guildId: {
+    type: String,
+    required: true
   },
-  content: { 
-    type: String, 
-    required: true 
+  channelId: {
+    type: String,
+    required: true
   },
-  creatorId: { 
-    type: String, 
-    required: true 
+  title: {
+    type: String,
+    required: true
   },
-  channelId: { 
-    type: String, 
-    required: true 
+  content: {
+    type: String,
+    required: true
   },
-  scheduledFor: { 
-    type: Date, 
-    required: true 
+  color: {
+    type: String,
+    default: '#0099FF'
+  },
+  creatorId: {
+    type: String,
+    required: true
+  },
+  scheduledDate: {
+    type: Date,
+    required: true
   },
   isSent: { 
     type: Boolean, 
@@ -51,3 +59,4 @@ const ScheduledAnnouncementSchema = new Schema({
 });
 
 module.exports = model('ScheduledAnnouncement', ScheduledAnnouncementSchema);
+

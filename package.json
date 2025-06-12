@@ -5,8 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
+ codex/rename-deploy.js-and-update-package.json
     "deploy": "node src/deploy-commands.js",
     "test": "mocha -r dotenv/config \"**/*.test.js\""
+=======
+    "deploy": "node src/deploy.js",
+    "test": "mocha -r dotenv/config --file test-setup.js \"**/*.test.js\""
+ main
   },
   "keywords": [
     "discord",
@@ -35,6 +40,7 @@
     "dotenv": "^16.5.0",
     "jsverify": "^0.8.4",
     "mocha": "^11.6.0",
-    "sinon": "^17.0.1"
+    "sinon": "^17.0.1",
+    "mongodb-memory-server": "^8.12.2"
   }
 }
